@@ -2,7 +2,7 @@ import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 function Contact() {
   return (
-    <div className='contactComp'>
+    <div className='contactComp' id='contactMe'>
       <div className='card mb-0'>
         <div className='h1 text-center title'>Contact Me</div>
         <div className='row'>

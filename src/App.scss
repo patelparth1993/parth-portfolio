@@ -4,21 +4,22 @@
   background-attachment: fixed;
   // opacity: 0.4;
   nav {
-    display: inline-block;
+    width: 100%;
     &.sticky {
       position: fixed;
       top: 0;
-      /* width: 100%; */
-      display: block;
       background-color: #15465f;
+      z-index: 5;
+      padding: 4px;
     }
     .container {
       .collapse {
+        justify-content: center;
         ul {
           li {
             a {
               color: white;
-              border-radius: 5%;
+              border-radius: 2rem;
               font-size: 18px;
               &:hover {
                 background-color: grey;
@@ -65,37 +66,108 @@
 }
 .aboutComp {
   font-size: 14px;
-  margin: 2rem 0rem;
+  padding-top: 70px;
   .jumbotron {
     padding: 30px 20px;
   }
 }
 .experienceComp {
-  margin: 2rem 0rem;
-}
-.projectComp {
-  margin: 2rem 0rem;
+  padding-top: 90px;
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+  }
 
-  .projectDisplay {
-    display: flex;
-    .card {
-      width: fit-content;
-      max-width: 33%;
-      margin: 0px 10px;
-    }
-    // Medium devices (tablets, 768px and up)
-    @media only screen and (max-width: 768px) {
-      display: block;
-      .card {
-        max-width: unset;
-        margin: 10px 0px;
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #e9ecef;
+    top: 0;
+    bottom: 0;
+    // left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    .content {
+      li {
+        background-color: #e9ecef;
+        border: none;
+      }
+
+      .techStack {
+        list-style: none;
+        padding-top: 20px;
+        li {
+          background-color: #15465f;
+          width: fit-content;
+          text-align: center;
+          color: white;
+          padding: 0px 3px;
+          border-radius: 5px;
+          margin: 5px;
+        }
       }
     }
   }
+
+  /* The circles on the timeline */
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -15px;
+    //right: -17px;
+    background-color: white;
+    border: 4px solid #15465f;
+    border-width: 15px;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  /* Add arrows to the right container (pointing left) */
+  .container::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #e9ecef transparent transparent;
+  }
 }
+// .projectComp {
+//   padding-top: 90px;
+
+//   .projectDisplay {
+//     display: flex;
+//     .card {
+//       width: fit-content;
+//       max-width: 33%;
+//       margin: 0px 10px;
+//     }
+//     // Medium devices (tablets, 768px and up)
+//     @media only screen and (max-width: 768px) {
+//       display: block;
+//       .card {
+//         max-width: unset;
+//         margin: 10px 0px;
+//       }
+//     }
+//   }
+// }
 
 .skillComp {
-  margin: 2rem 0rem;
+  padding-top: 90px;
   .skills1,
   .skills2,
   .skills3 {
@@ -117,6 +189,7 @@
 
 .educationComp {
   margin: 2rem 0rem;
+  padding-top: 50px;
   .card {
     .row {
       .col-md-3 {
@@ -131,13 +204,20 @@
           }
         }
       }
+      .col-md-9 {
+        background-color: #e9ecef;
+      }
     }
   }
 }
 .section {
   background-color: #15465f;
+  margin-top: 50px;
   .contactComp {
     padding: 3rem 0px;
+    .card {
+      background-color: #e9ecef;
+    }
   }
 }
 

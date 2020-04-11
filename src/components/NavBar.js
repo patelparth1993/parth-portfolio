@@ -31,6 +31,7 @@ class NavBar extends React.Component {
   };
 
   handleScroll = () => {
+    console.log(window.pageYOffset);
     if (window.pageYOffset >= 450) {
       this.setState({
         navClass: "sticky",
@@ -41,31 +42,32 @@ class NavBar extends React.Component {
       });
     }
   };
+
   render() {
     const { toggle } = this.state;
     return (
-      <Navbar dark expand='sm' className={this.state.navClass}>
+      <Navbar dark expand='lg' className={this.state.navClass}>
         <Container>
           <NavbarToggler onClick={this.toggleNavbar} />
           <Collapse isOpen={toggle} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href='#'>About</NavLink>
+                <NavLink href='#about'>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='#'>Experience</NavLink>
+                <NavLink href='#experience'>Experience</NavLink>
+              </NavItem>
+              {/* <NavItem>
+                <NavLink href='#projects'>Projects</NavLink>
+              </NavItem> */}
+              <NavItem>
+                <NavLink href='#skills'>Skills</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='#'>Projects</NavLink>
+                <NavLink href='#education'>Education</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='#'>Skills</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Education</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Contact</NavLink>
+                <NavLink href='#contactMe'>Contact</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

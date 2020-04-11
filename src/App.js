@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import Profile from "./components/profile/Profile";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
-import Project from "./components/projects/Project";
+//import Project from "./components/projects/Project";
 import Skills from "./components/skills/Skills";
 import Education from "./components/education/Education";
 import Contact from "./components/contact/Contact";
@@ -14,17 +14,15 @@ function App() {
   return (
     <React.Fragment>
       <div id='backgroundImage'>
+        <NavBar />
         <div className='container'>
-          <div className='header'>
-            <NavBar />
-          </div>
           <Profile />
         </div>
       </div>
       <div className='container'>
         <About />
         <Experience />
-        <Project />
+        {/* <Project /> */}
         <Skills />
         <Education />
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Education() {
   return (
-    <div className='educationComp'>
+    <div className='educationComp' id='education'>
       <h1 className='display-6' style={{ textAlign: "center" }}>
         Education
       </h1>

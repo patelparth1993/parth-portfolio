@@ -11,19 +11,33 @@ function Profile() {
       <h5>Full Stack Developer</h5>
       <br />
       <div className='profileConnect'>
-        <a id='contactMeBtn' href='#'>
+        <a id='contactMeBtn' href='#contactMe'>
           Contact Me
         </a>
-        <a href='#' id='resumeBtn' style={{ marginLeft: "5px" }}>
+        <a
+          href='https://drive.google.com/open?id=1vjLvcJttlj5D0L0OaMdP55T-eJfnUGkF'
+          id='resumeBtn'
+          target='_blank'
+          style={{ marginLeft: "5px" }}
+        >
           Download Resume
         </a>
         <br />
         <br />
         <div className='socialConnect'>
-          <a id='linkedin' href='#'>
+          <a
+            id='linkedin'
+            href='https://www.linkedin.com/in/parth-patel-b67a98bb/'
+            target='_blank'
+          >
             <i className='fa fa-linkedin'></i>
           </a>
-          <a id='github' href='#' style={{ marginLeft: "5px" }}>
+          <a
+            id='github'
+            href='https://github.com/patelparth1993'
+            target='_blank'
+            style={{ marginLeft: "5px" }}
+          >
             <i className='fa fa-github'></i>
           </a>
         </div>
