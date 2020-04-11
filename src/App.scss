@@ -1,0 +1,159 @@
+#backgroundImage {
+  background: url("./images/portfolio-image.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  // opacity: 0.4;
+  nav {
+    display: inline-block;
+    &.sticky {
+      position: fixed;
+      top: 0;
+      /* width: 100%; */
+      display: block;
+      background-color: #15465f;
+    }
+    .container {
+      .collapse {
+        ul {
+          li {
+            a {
+              color: white;
+              border-radius: 5%;
+              font-size: 18px;
+              &:hover {
+                background-color: grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    //opacity: 1;
+    color: white;
+    text-align: center;
+    .profileComp {
+      #profilePic {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+      }
+      .profileConnect {
+        a {
+          display: inline-block;
+          background-color: rgb(21, 70, 95);
+          color: white;
+          padding: 6px;
+          border-radius: 5px;
+          width: 166px;
+          height: 10%;
+
+          &:hover {
+            text-decoration: none;
+            background-color: rgb(89, 168, 207);
+          }
+        }
+        .socialConnect {
+          a {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+.aboutComp {
+  font-size: 14px;
+  margin: 2rem 0rem;
+  .jumbotron {
+    padding: 30px 20px;
+  }
+}
+.experienceComp {
+  margin: 2rem 0rem;
+}
+.projectComp {
+  margin: 2rem 0rem;
+
+  .projectDisplay {
+    display: flex;
+    .card {
+      width: fit-content;
+      max-width: 33%;
+      margin: 0px 10px;
+    }
+    // Medium devices (tablets, 768px and up)
+    @media only screen and (max-width: 768px) {
+      display: block;
+      .card {
+        max-width: unset;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
+.skillComp {
+  margin: 2rem 0rem;
+  .skills1,
+  .skills2,
+  .skills3 {
+    display: flex;
+    .skillSet1,
+    .skillSet2 {
+      width: 50%;
+      margin: 15px;
+      .progress {
+        height: 5px;
+        margin-bottom: 15px;
+        .progress-bar {
+          background-color: #15465f !important;
+        }
+      }
+    }
+  }
+}
+
+.educationComp {
+  margin: 2rem 0rem;
+  .card {
+    .row {
+      .col-md-3 {
+        background-color: #15465f;
+        color: white;
+        text-align: center;
+        .card-body {
+          padding-top: 55px;
+
+          @media only screen and (max-width: 768px) {
+            padding: 20px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+.section {
+  background-color: #15465f;
+  .contactComp {
+    padding: 3rem 0px;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+// }
+
+// Medium devices (tablets, 768px and up)
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// }
