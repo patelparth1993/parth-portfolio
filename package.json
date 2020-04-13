@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
@@ -20,7 +21,7 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"node server\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
