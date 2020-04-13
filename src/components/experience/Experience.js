@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  ListGroup,
-  ListGroupItem,
-  ListGroupItemHeading,
-  ListGroupItemText,
-} from "reactstrap";
+import { ListGroup, ListGroupItem, ListGroupItemHeading } from "reactstrap";
 function Experience() {
   return (
     <div className='experienceComp' id='experience'>

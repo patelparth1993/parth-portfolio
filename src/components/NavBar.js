@@ -1,18 +1,10 @@
 import React from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-} from "reactstrap";
+import { Navbar, Nav, NavItem, NavLink, Container } from "reactstrap";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: false,
+      openSlickMenu: false,
       navClass: "", //mb-5
     };
   }
@@ -26,12 +18,18 @@ class NavBar extends React.Component {
   }
   toggleNavbar = () => {
     this.setState({
-      toggle: !this.state.toggle,
+      openSlickMenu: !this.state.openSlickMenu,
+    });
+  };
+
+  closeSlickMenu = () => {
+    console.log("mouse out");
+    this.setState({
+      openSlickMenu: false,
     });
   };
 
   handleScroll = () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset >= 450) {
       this.setState({
         navClass: "sticky",
@@ -44,13 +42,26 @@ class NavBar extends React.Component {
   };
 
   render() {
-    const { toggle } = this.state;
+    const { openSlickMenu } = this.state;
     return (
       <Navbar dark expand='lg' className={this.state.navClass}>
         <Container>
-          <NavbarToggler onClick={this.toggleNavbar} />
-          <Collapse isOpen={toggle} navbar>
-            <Nav navbar>
+          <div className={openSlickMenu ? "slickMenu show" : "slickMenu "}>
+            <button
+              aria-label='Toggle navigation'
+              type='button'
+              className={
+                openSlickMenu ? "navbar-toggler close" : "navbar-toggler"
+              }
+              onClick={this.toggleNavbar}
+            >
+              <span
+                className='navbar-toggler-icon'
+                hidden={openSlickMenu}
+              ></span>
+              <span hidden={!openSlickMenu}>X</span>
+            </button>
+            <Nav navbar onBlur={this.closeSlickMenu}>
               <NavItem>
                 <NavLink href='#about'>About</NavLink>
               </NavItem>
@@ -70,7 +81,7 @@ class NavBar extends React.Component {
                 <NavLink href='#contactMe'>Contact</NavLink>
               </NavItem>
             </Nav>
-          </Collapse>
+          </div>
         </Container>
       </Navbar>
     );

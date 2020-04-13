@@ -13,9 +13,10 @@ import "./App.scss";
 function App() {
   return (
     <React.Fragment>
-      <div id='backgroundImage'>
+      <div id='header'>
         <NavBar />
         <div className='container'>
+          <br />
           <Profile />
         </div>
       </div>
@@ -26,7 +27,7 @@ function App() {
         <Skills />
         <Education />
       </div>
-      <div className='section'>
+      <div className='footer'>
         <div className='container'>
           <Contact />
         </div>

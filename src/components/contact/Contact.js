@@ -11,13 +11,15 @@ function Contact() {
               <div className='container text-center'>
                 <a
                   className='cc-linkedin btn btn-link'
+                  rel='noopener noreferrer'
                   href='https://www.linkedin.com/in/parth-patel-b67a98bb/'
                   target='_blank'
                 >
                   <i aria-hidden='true' className='fa fa-linkedin fa-2x '></i>
                 </a>
                 <a
-                  className='cc-github btn btn-link '
+                  className='cc-github btn btn-link'
+                  rel='noopener noreferrer'
                   href='https://github.com/patelparth1993'
                   target='_blank'
                 >
