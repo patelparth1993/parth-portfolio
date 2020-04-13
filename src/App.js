@@ -27,11 +27,7 @@ function App() {
         <Skills />
         <Education />
       </div>
-      <div className='footer'>
-        <div className='container'>
-          <Contact />
-        </div>
-      </div>
+      <Contact />
     </React.Fragment>
   );
 }

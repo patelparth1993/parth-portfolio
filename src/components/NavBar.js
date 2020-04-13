@@ -44,7 +44,7 @@ class NavBar extends React.Component {
   render() {
     const { openSlickMenu } = this.state;
     return (
-      <Navbar dark expand='lg' className={this.state.navClass}>
+      <Navbar dark expand='sm' className={this.state.navClass}>
         <Container>
           <div className={openSlickMenu ? "slickMenu show" : "slickMenu "}>
             <button
