@@ -21,7 +21,7 @@ function Profile() {
           target='_blank'
           style={{ marginLeft: "5px" }}
         >
-          Download Resume
+          Resume
         </a>
         <br />
         <br />
