@@ -33,6 +33,7 @@ function Experience() {
                   <li>FreeMarker</li>
                   <li>SASS</li>
                   <li>HTML5</li>
+                  <li>Gulp</li>
                   <li>CSS3</li>
                   <li>JIRA</li>
                   <li>Kanban</li>
