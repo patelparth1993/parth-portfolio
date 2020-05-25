@@ -1,10 +1,9 @@
 import React from "react";
-import profilePic from "../../images/Profile_pic.JPG";
 import "font-awesome/css/font-awesome.min.css";
 function Profile() {
   return (
     <div className='profileComp'>
-      <img id='profilePic' src={profilePic} alt='logo' />
+      <img id='profilePic' src='https://i.imgur.com/PTjbxtm.jpg' alt='logo' />
       <br />
       <br />
       <h1>Parth Patel</h1>
