@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
+const compress = require("compression");
 const app = express();
+
+app.use(compress());
 
 const publicPath = path.join(__dirname, "build");
 app.use(express.static(publicPath));
